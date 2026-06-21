@@ -1,80 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard - Switz Investment</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header class="topbar">
-    <h1>Switz Investment</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="https://wa.me/2348104181436" target="_blank" class="btn">Support</a>
-      <button class="logout" onclick="logoutUser()">Logout</button>
-    </nav>
-  </header>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Dashboard</title><link rel="stylesheet" href="style.css"></head>
+<body class="wallet-body">
+<main class="phone-shell">
+  <section class="top-row">
+    <div class="avatar">SI</div>
+    <div><p>Hi,</p><h1 id="profileName">New Investor</h1></div>
+    <div class="top-icons"><span>🎧</span><span class="bell">🔔<b>9+</b></span></div>
+  </section>
 
-  <main class="dashboard">
-    <section class="dash-hero">
-      <div>
-        <p class="small">Investor Profile</p>
-        <h2 id="profileName">New Investor</h2>
-        <p id="profileEmail"></p>
-        <p id="profilePhone"></p>
-      </div>
-      <div class="balance-box">
-        <p>Available Balance</p>
-        <h1 id="balance">₦0.00</h1>
-        <span>New account starts with zero balance</span>
-      </div>
-    </section>
+  <section class="balance-panel">
+    <div class="balance-head"><span>✅ Available Balance</span><a href="#transactions">Transaction History ›</a></div>
+    <h2 id="balance">₦0.00</h2>
+    <button onclick="window.location.href='https://wa.me/2348104181436'">Add Money</button>
+    <div class="earnings">🪙 Yesterday's Earnings: <b>+₦0.00</b> ›</div>
+  </section>
 
-    <section class="stats">
-      <div class="stat-card"><p>Total Investment</p><h2>₦0.00</h2></div>
-      <div class="stat-card"><p>Total Profit</p><h2>₦0.00</h2></div>
-      <div class="stat-card"><p>Active Plan</p><h2>None</h2></div>
-      <div class="stat-card"><p>Account Status</p><h2>Pending</h2></div>
-    </section>
+  <section class="quick-grid">
+    <div><i>🏦</i><span>To Bank</span></div>
+    <div><i>💰</i><span>Deposit</span></div>
+    <div><i>🐷</i><span>Savings</span></div>
+    <div><i>💳</i><span>ATM Card</span></div>
+  </section>
 
-    <section class="dashboard-grid">
-      <div class="panel">
-        <h2>Investment Growth</h2>
-        <div class="chart">
-          <div style="height:35%"></div>
-          <div style="height:52%"></div>
-          <div style="height:46%"></div>
-          <div style="height:70%"></div>
-          <div style="height:62%"></div>
-          <div style="height:85%"></div>
-        </div>
-        <p class="muted">No active investment yet. Chart updates after plan activation.</p>
-      </div>
+  <section class="services">
+    <div><i>📱</i><span>Airtime</span></div>
+    <div><i>📊</i><span>Data</span></div>
+    <div><i>📺</i><span>TV</span></div>
+    <div><i>⚡</i><span>Electricity</span></div>
+    <div><i>🎁</i><span>Refer & Earn</span></div>
+    <div><i>🛡️</i><span>Insurance</span></div>
+    <div><i>💵</i><span>CashBox</span></div>
+    <div><i>▦</i><span>More</span></div>
+  </section>
 
-      <div class="panel">
-        <h2>Quick Actions</h2>
-        <a class="action" href="#plans">Choose Investment Plan</a>
-        <a class="action" href="https://wa.me/2348104181436" target="_blank">Contact WhatsApp Support</a>
-        <button class="action disabled">Request Withdrawal</button>
-      </div>
-    </section>
+  <section class="reward-card">
+    <div class="coin">₦2500<br><small>Each Share</small></div>
+    <div><h3>100% Cash Reward</h3><p>Earn up to ₦2500 per invite</p></div>
+    <button>Claim</button>
+  </section>
 
-    <section id="plans" class="plans dashboard-plans">
-      <div class="card"><h3>Bronze Plan</h3><p>Invest ₦3,000</p><h4>Expected Return: ₦12,000</h4><p>Duration: 1 week</p></div>
-      <div class="card"><h3>Silver Plan</h3><p>Invest ₦6,500</p><h4>Expected Return: ₦30,000</h4><p>Duration: 1 week</p></div>
-      <div class="card gold"><h3>Golden Promo Plan</h3><p>Invest ₦10,000</p><h4>Expected Return: ₦50,000</h4><p>Duration: 1 week</p></div>
-    </section>
+  <section class="investment-cards">
+    <div><h3>Bronze Plan</h3><p>Invest ₦3,000</p><b>₦12,000</b><button>Start</button></div>
+    <div><h3>Silver Plan</h3><p>Invest ₦6,500</p><b>₦30,000</b><button>Invest</button></div>
+    <div><h3>Golden Promo</h3><p>Invest ₦10,000</p><b>₦50,000</b><button>Invest</button></div>
+  </section>
 
-    <section class="panel">
-      <h2>Transaction History</h2>
-      <div class="table">
-        <div class="row head"><span>Date</span><span>Type</span><span>Amount</span><span>Status</span></div>
-        <div class="row empty-row"><span>No transactions yet</span><span>-</span><span>₦0.00</span><span>Pending</span></div>
-      </div>
-    </section>
-  </main>
+  <section id="transactions" class="transactions">
+    <h3>Transaction History</h3>
+    <div class="tx-row"><span>No transaction yet</span><b>₦0.00</b><em>Pending</em></div>
+  </section>
+</main>
 
-  <script src="app.js"></script>
-</body>
-</html>
+<nav class="bottom-nav">
+  <a href="dashboard.html">⌂<span>Home</span></a>
+  <a href="#plans">▣<span>Wealth</span></a>
+  <a href="#transactions">🎁<span>Reward</span></a>
+  <a href="login.html" onclick="logoutUser()">☻<span>Me</span></a>
+</nav>
+<script src="app.js"></script>
+</body></html>
