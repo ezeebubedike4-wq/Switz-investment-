@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - Switz Investment</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Switz Dashboard</div>
+    <button class="btn small ghost" onclick="logout()">Logout</button>
+  </header>
+  <main class="dashboard">
+    <section class="dash-card">
+      <h1>Welcome, <span id="userName"></span></h1>
+      <p>Your selected plan: <b id="userPlan"></b></p>
+      <p>Status: <b class="pending">Pending Verification</b></p>
+    </section>
+
+    <section class="dash-grid">
+      <div class="dash-card">
+        <h2>Profile</h2>
+        <p><b>Email:</b> <span id="userEmail"></span></p>
+        <p><b>Phone:</b> <span id="userPhone"></span></p>
+      </div>
+      <div class="dash-card">
+        <h2>Investment Summary</h2>
+        <p><b>Amount:</b> <span id="planAmount"></span></p>
+        <p><b>Expected Return:</b> <span id="planReturn"></span></p>
+        <p><b>Duration:</b> 1 week</p>
+      </div>
+    </section>
+
+    <a class="btn full" href="https://wa.me/2348104181436?text=Hello%20Switz%20Investment%2C%20I%20created%20an%20account%20and%20want%20to%20verify%20my%20investment%20plan." target="_blank">Contact WhatsApp Support</a>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Account - Switz Investment</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="auth-box">
+    <h1>Create Account</h1>
+    <p>Register and select your investment plan.</p>
+    <form id="signupForm">
+      <input id="name" placeholder="Full name" required />
+      <input id="phone" placeholder="Phone number" required />
+      <input id="email" type="email" placeholder="Email address" required />
+      <input id="password" type="password" placeholder="Password" required />
+      <select id="plan" required>
+        <option value="">Choose plan</option>
+        <option value="Bronze">Bronze Plan - ₦3,000 to ₦12,000</option>
+        <option value="Silver">Silver Plan - ₦6,500 to ₦30,000</option>
+        <option value="Golden">Golden Promo Plan - ₦10,000 to ₦50,000</option>
+      </select>
+      <button class="btn full" type="submit">Create Account</button>
+    </form>
+    <p>Already registered? <a href="login.html">Login here</a></p>
+    <a href="index.html">Back Home</a>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
