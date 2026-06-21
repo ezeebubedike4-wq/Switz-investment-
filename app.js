@@ -13,11 +13,11 @@ function loginUser(){
   const password=document.getElementById('loginPassword').value.trim();
   const user=JSON.parse(localStorage.getItem('switzUser')||'null');
   if(!user){alert('No account found. Please sign up first.');window.location.href='signup.html';return;}
-  if(user.email===email && user.password===password){localStorage.setItem('switzLoggedIn','true');window.location.href='dashboard.html';}
-  else{alert('Wrong email or password.');}
+  if(user.email===email&&user.password===password){localStorage.setItem('switzLoggedIn','true');window.location.href='dashboard.html';}
+  else alert('Wrong email or password.');
 }
-function logoutUser(){localStorage.removeItem('switzLoggedIn');}
-document.addEventListener('DOMContentLoaded',()=>{
+function logoutUser(){localStorage.removeItem('switzLoggedIn');window.location.href='login.html';}
+document.addEventListener('DOMContentLoaded',function(){
   if(location.pathname.includes('dashboard.html')){
     const user=JSON.parse(localStorage.getItem('switzUser')||'null');
     if(user){

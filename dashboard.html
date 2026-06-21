@@ -1,75 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Switz Dashboard</title><link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard</title>
+<link rel="stylesheet" href="style.css">
 </head>
-<body class="app-body">
-  <main class="app-screen">
-    <section class="app-header">
+<body class="dash-page">
+<div class="app">
+  <header class="dash-head">
+    <div class="profile">
       <div class="avatar">SI</div>
-      <div class="hello">
-        <span>Hi,</span>
+      <div>
+        <small>Hi,</small>
         <h1 id="profileName">Investor</h1>
       </div>
-      <div class="header-icons">
-        <button>☾</button>
-        <button>🇳🇬</button>
-        <button class="notify">🔔<b>9+</b></button>
-      </div>
-    </section>
+    </div>
+    <div class="icons">
+      <span>☾</span><span>🇳🇬</span><span class="notice">🔔<b>9+</b></span>
+    </div>
+  </header>
 
-    <section class="wallet-card">
-      <div class="wallet-top">
-        <span>💼 Wallet Balance</span>
-        <strong id="balance">₦0.00</strong>
-      </div>
-      <div class="wallet-actions">
-        <button>↗<span>Withdraw</span></button>
-        <button>👥<span>Referral</span></button>
-        <button>⭐<span>Upgrade</span></button>
-      </div>
-    </section>
+  <section class="wallet">
+    <div class="wallet-top">
+      <p>💼 Wallet Balance</p>
+      <h2 id="balance">₦0.00</h2>
+    </div>
+    <div class="wallet-actions">
+      <button><strong>↗</strong><span>Withdraw</span></button>
+      <button><strong>👥</strong><span>Referral</span></button>
+      <button><strong>⭐</strong><span>Upgrade</span></button>
+    </div>
+  </section>
 
-    <section class="two-cards">
-      <div><span>Daily Task</span><b>₦0.00</b><em>↗</em></div>
-      <div><span>Sales Commission</span><b>₦0.00</b><em>↗</em></div>
-    </section>
+  <section class="money-cards">
+    <div><p>Daily Task</p><h3>₦0.00</h3><i>↗</i></div>
+    <div><p>Sales Commission</p><h3>₦0.00</h3><i>↗</i></div>
+  </section>
 
-    <h2 class="section-title">Our Services</h2>
-    <section class="service-grid">
-      <div><i>🏆</i><span>Daily Task</span></div>
-      <div><i>✈️</i><span>Sponsored Post</span></div>
-      <div><i>🌐</i><span>Digital Skill</span></div>
-      <div><i>📖</i><span>Course</span></div>
-      <div><i>🛍️</i><span>Marketplace</span></div>
-      <div><i>🏪</i><span>Monetization</span></div>
-      <div><i>📱</i><span>Buy Airtime</span></div>
-      <div><i>📶</i><span>Buy Data</span></div>
-      <div><i>💻</i><span>Cable</span></div>
-      <div><i>⚙️</i><span>eSim</span></div>
-    </section>
+  <h2 class="title">Our Services</h2>
+  <section class="services">
+    <div><i>🏆</i><span>Daily Task</span></div>
+    <div><i>✈️</i><span>Sponsored Post</span></div>
+    <div><i>🌐</i><span>Digital Skill</span></div>
+    <div><i>📖</i><span>Course</span></div>
+    <div><i>🛍️</i><span>Marketplace</span></div>
+    <div><i>🏪</i><span>Monetization</span></div>
+    <div><i>📱</i><span>Buy Airtime</span></div>
+    <div><i>📶</i><span>Buy Data</span></div>
+    <div><i>💻</i><span>Cable</span></div>
+    <div><i>⚙️</i><span>eSim</span></div>
+  </section>
 
-    <section class="plans-wallet">
-      <h2>Investment Plans</h2>
-      <div class="plan-row"><div><h3>Bronze</h3><p>Invest ₦3,000</p></div><b>Earn ₦12,000</b></div>
-      <div class="plan-row"><div><h3>Silver</h3><p>Invest ₦6,500</p></div><b>Earn ₦30,000</b></div>
-      <div class="plan-row"><div><h3>Golden Promo</h3><p>Invest ₦10,000</p></div><b>Earn ₦50,000</b></div>
-    </section>
+  <section class="plans-card">
+    <h2>Investment Plans</h2>
+    <div class="plan"><div><h3>Bronze Plan</h3><p>Invest ₦3,000</p></div><b>Earn ₦12,000</b></div>
+    <div class="plan"><div><h3>Silver Plan</h3><p>Invest ₦6,500</p></div><b>Earn ₦30,000</b></div>
+    <div class="plan"><div><h3>Golden Promo</h3><p>Invest ₦10,000</p></div><b>Earn ₦50,000</b></div>
+  </section>
 
-    <section class="transactions">
-      <h2>Transaction History</h2>
-      <div><span>No transaction yet</span><b>₦0.00</b><em>Pending</em></div>
-    </section>
-  </main>
+  <section class="transactions">
+    <h2>Transaction History</h2>
+    <div class="tx"><span>No transaction yet</span><b>₦0.00</b><em>Pending</em></div>
+  </section>
+</div>
 
-  <nav class="bottom-nav">
-    <a href="#"><i>☎</i><span>Airtime</span></a>
-    <a href="#"><i>▯</i><span>Data</span></a>
-    <a class="active" href="dashboard.html"><i>⌂</i><span>Home</span></a>
-    <a href="#plans"><i>📣</i><span>Ads</span></a>
-    <a href="login.html" onclick="logoutUser()"><i>♙</i><span>Profile</span></a>
-  </nav>
-  <script src="app.js"></script>
+<nav class="bottom">
+  <a>☎<span>Airtime</span></a>
+  <a>▯<span>Data</span></a>
+  <a class="active">⌂<span>Home</span></a>
+  <a>📣<span>Ads</span></a>
+  <a onclick="logoutUser()">♙<span>Profile</span></a>
+</nav>
+<script src="app.js"></script>
 </body>
 </html>
